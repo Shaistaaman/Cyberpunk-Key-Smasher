@@ -1,0 +1,552 @@
+{
+  "pbtResults": {
+    "2.3 Write property test for name sanitizing": {
+      "status": "passed",
+      "lastRunTimestamp": 1794373823290
+    },
+    "2.6 Write property test for target character": {
+      "status": "passed",
+      "lastRunTimestamp": 1794373845640
+    },
+    "2.5 Write property test for target position": {
+      "status": "passed",
+      "lastRunTimestamp": 1794373846550
+    },
+    "3.2 Write property test for relocation": {
+      "status": "passed",
+      "lastRunTimestamp": 1794373848553
+    },
+    "2.4 Write property test for start enablement": {
+      "status": "passed",
+      "lastRunTimestamp": 1794373849135
+    },
+    "3.4 Write property test for mistakes": {
+      "status": "passed",
+      "lastRunTimestamp": 1794373889683
+    },
+    "3.5 Write property test for ignored inputs": {
+      "status": "passed",
+      "lastRunTimestamp": 1794373894939
+    },
+    "3.3 Write property test for correct key scoring": {
+      "status": "passed",
+      "lastRunTimestamp": 1794373895439
+    },
+    "3.6 Write property test for game termination": {
+      "status": "passed",
+      "lastRunTimestamp": 1794373898436
+    },
+    "5.2 Write property test for serialization round trip": {
+      "status": "passed",
+      "lastRunTimestamp": 1794374163476
+    },
+    "5.3 Write property test for malformed storage": {
+      "status": "passed",
+      "lastRunTimestamp": 1794374221793
+    },
+    "5.4 Write property test for top five ordering": {
+      "status": "passed",
+      "lastRunTimestamp": 1794374436261
+    },
+    "6.3 Write property test for sound restart": {
+      "status": "passed",
+      "lastRunTimestamp": 1794374719473
+    },
+    "6.2 Write property test for sound failure tolerance": {
+      "status": "passed",
+      "lastRunTimestamp": 1794374720950
+    }
+  },
+  "executionHistory": {
+    "1. Set up project foundation": [
+      {
+        "executionId": "2b87fac9-a3a0-47c5-b780-cb096a16b8a6",
+        "chatSessionId": "sess_6d343b8e-fbef-4ac2-8ad1-fb109281c120",
+        "timestamp": 1794372326839
+      },
+      {
+        "executionId": "2b87fac9-a3a0-47c5-b780-cb096a16b8a6",
+        "chatSessionId": "sess_6d343b8e-fbef-4ac2-8ad1-fb109281c120",
+        "timestamp": 1794372478534
+      }
+    ],
+    "1.2 Create shared types and constants": [
+      {
+        "executionId": "7df2314f-3833-4f94-88f7-dfc6d218f79a",
+        "chatSessionId": "sess_5a2ecc6a-3c59-4c85-9fdb-f8de64d4a744",
+        "timestamp": 1794372765156
+      },
+      {
+        "executionId": "7df2314f-3833-4f94-88f7-dfc6d218f79a",
+        "chatSessionId": "sess_5a2ecc6a-3c59-4c85-9fdb-f8de64d4a744",
+        "timestamp": 1794372796684
+      }
+    ],
+    "1.3 Create the `public/sounds/` folder for user-provided mp3 files": [
+      {
+        "executionId": "9cf5585a-7440-4795-9d07-16c6f35d7882",
+        "chatSessionId": "sess_68501547-3fa7-49db-b06e-caeca3abfa88",
+        "timestamp": 1794372819530
+      },
+      {
+        "executionId": "9cf5585a-7440-4795-9d07-16c6f35d7882",
+        "chatSessionId": "sess_68501547-3fa7-49db-b06e-caeca3abfa88",
+        "timestamp": 1794372836214
+      }
+    ],
+    "2.2 Implement `keys.ts` and `target.ts`": [
+      {
+        "executionId": "397ddff6-4736-4f4b-93d2-741febc4d2da",
+        "chatSessionId": "sess_3a2d3f17-ed56-444a-8644-10da7a9affb6",
+        "timestamp": 1794372862310
+      },
+      {
+        "executionId": "397ddff6-4736-4f4b-93d2-741febc4d2da",
+        "chatSessionId": "sess_3a2d3f17-ed56-444a-8644-10da7a9affb6",
+        "timestamp": 1794372893290
+      }
+    ],
+    "3.1 Implement `reducer.ts`": [
+      {
+        "executionId": "5a87943b-238e-42b0-a6b9-6805eb4ef37e",
+        "chatSessionId": "sess_927bc63b-8320-4e5b-9a87-ce11f3b2609a",
+        "timestamp": 1794373560990
+      },
+      {
+        "executionId": "5a87943b-238e-42b0-a6b9-6805eb4ef37e",
+        "chatSessionId": "sess_927bc63b-8320-4e5b-9a87-ce11f3b2609a",
+        "timestamp": 1794373602263
+      }
+    ],
+    "3. Implement the game reducer": [
+      {
+        "executionId": "5a87943b-238e-42b0-a6b9-6805eb4ef37e",
+        "chatSessionId": "sess_927bc63b-8320-4e5b-9a87-ce11f3b2609a",
+        "timestamp": 1794373602374
+      }
+    ],
+    "4. Checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373678936
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373944283
+      }
+    ],
+    "1.1 Scaffold the Vite + React + TypeScript project with Tailwind CSS and Vitest": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373739412
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373766414
+      }
+    ],
+    "2.1 Implement `name.ts`": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373771639
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373795629
+      }
+    ],
+    "2.3 Write property test for name sanitizing": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373801130
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373858134
+      }
+    ],
+    "2.4 Write property test for start enablement": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373801191
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373858662
+      }
+    ],
+    "2.5 Write property test for target position": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373801294
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373859361
+      }
+    ],
+    "2.6 Write property test for target character": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373801687
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373859965
+      }
+    ],
+    "3.2 Write property test for relocation": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373802220
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373860739
+      }
+    ],
+    "3.3 Write property test for correct key scoring": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373861258
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373906686
+      }
+    ],
+    "3.4 Write property test for mistakes": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373862067
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373907416
+      }
+    ],
+    "3.5 Write property test for ignored inputs": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373862563
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373907914
+      }
+    ],
+    "3.6 Write property test for game termination": [
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373863056
+      },
+      {
+        "executionId": "8040e735-a2f8-41ae-9703-190fb75f4e02",
+        "chatSessionId": "sess_bfaa5084-0cd9-4258-9060-e917b8ddd526",
+        "timestamp": 1794373908421
+      }
+    ],
+    "5.1 Implement `src/storage/leaderboard.ts`": [
+      {
+        "executionId": "51717884-77cf-48c5-aafc-c3ba1deca06c",
+        "chatSessionId": "sess_35d6933e-3176-4436-9b47-1fd74dccef99",
+        "timestamp": 1794374061123
+      },
+      {
+        "executionId": "51717884-77cf-48c5-aafc-c3ba1deca06c",
+        "chatSessionId": "sess_35d6933e-3176-4436-9b47-1fd74dccef99",
+        "timestamp": 1794374097242
+      }
+    ],
+    "5.2 Write property test for serialization round trip": [
+      {
+        "executionId": "d555512b-93e5-4afe-8937-99ac105f4196",
+        "chatSessionId": "sess_6ecb2a1d-41d8-41f4-9ecd-61f27f67a9c3",
+        "timestamp": 1794374126325
+      },
+      {
+        "executionId": "d555512b-93e5-4afe-8937-99ac105f4196",
+        "chatSessionId": "sess_6ecb2a1d-41d8-41f4-9ecd-61f27f67a9c3",
+        "timestamp": 1794374172308
+      }
+    ],
+    "5.3 Write property test for malformed storage": [
+      {
+        "executionId": "48e6a102-9dcc-4895-9903-3e25d15cc1e2",
+        "chatSessionId": "sess_215a3086-7cf6-40d7-af75-50adcc49afca",
+        "timestamp": 1794374187182
+      },
+      {
+        "executionId": "48e6a102-9dcc-4895-9903-3e25d15cc1e2",
+        "chatSessionId": "sess_215a3086-7cf6-40d7-af75-50adcc49afca",
+        "timestamp": 1794374226554
+      }
+    ],
+    "5.4 Write property test for top five ordering": [
+      {
+        "executionId": "ce01095f-bad9-4ba0-9d85-9f5d69c311dd",
+        "chatSessionId": "sess_4efb97e6-e6ac-4c87-9bbc-6b121889a608",
+        "timestamp": 1794374246885
+      },
+      {
+        "executionId": "ce01095f-bad9-4ba0-9d85-9f5d69c311dd",
+        "chatSessionId": "sess_4efb97e6-e6ac-4c87-9bbc-6b121889a608",
+        "timestamp": 1794374444007
+      }
+    ],
+    "5.5 Write unit tests for storage behavior": [
+      {
+        "executionId": "1c447d5e-e9bc-483a-a4bb-dcdb4c7fc23d",
+        "chatSessionId": "sess_2f261584-9c5f-4943-9b2f-718cd08905a9",
+        "timestamp": 1794374459369
+      },
+      {
+        "executionId": "1c447d5e-e9bc-483a-a4bb-dcdb4c7fc23d",
+        "chatSessionId": "sess_2f261584-9c5f-4943-9b2f-718cd08905a9",
+        "timestamp": 1794374501861
+      }
+    ],
+    "5. Implement leaderboard persistence": [
+      {
+        "executionId": "1c447d5e-e9bc-483a-a4bb-dcdb4c7fc23d",
+        "chatSessionId": "sess_2f261584-9c5f-4943-9b2f-718cd08905a9",
+        "timestamp": 1794374501967
+      }
+    ],
+    "6.1 Implement `src/audio/SoundPlayer.ts`": [
+      {
+        "executionId": "4feb766c-f056-49e5-a118-aefaeb870611",
+        "chatSessionId": "sess_2fc50ef2-8591-48f3-af5c-d74de5b43026",
+        "timestamp": 1794374564955
+      },
+      {
+        "executionId": "4feb766c-f056-49e5-a118-aefaeb870611",
+        "chatSessionId": "sess_2fc50ef2-8591-48f3-af5c-d74de5b43026",
+        "timestamp": 1794374654949
+      }
+    ],
+    "6.2 Write property test for sound failure tolerance": [
+      {
+        "executionId": "4feb766c-f056-49e5-a118-aefaeb870611",
+        "chatSessionId": "sess_2fc50ef2-8591-48f3-af5c-d74de5b43026",
+        "timestamp": 1794374664124
+      },
+      {
+        "executionId": "4feb766c-f056-49e5-a118-aefaeb870611",
+        "chatSessionId": "sess_2fc50ef2-8591-48f3-af5c-d74de5b43026",
+        "timestamp": 1794374730516
+      }
+    ],
+    "6.3 Write property test for sound restart": [
+      {
+        "executionId": "4feb766c-f056-49e5-a118-aefaeb870611",
+        "chatSessionId": "sess_2fc50ef2-8591-48f3-af5c-d74de5b43026",
+        "timestamp": 1794374664390
+      },
+      {
+        "executionId": "4feb766c-f056-49e5-a118-aefaeb870611",
+        "chatSessionId": "sess_2fc50ef2-8591-48f3-af5c-d74de5b43026",
+        "timestamp": 1794374731026
+      }
+    ],
+    "6.4 Write unit tests for SoundPlayer": [
+      {
+        "executionId": "4feb766c-f056-49e5-a118-aefaeb870611",
+        "chatSessionId": "sess_2fc50ef2-8591-48f3-af5c-d74de5b43026",
+        "timestamp": 1794374664499
+      },
+      {
+        "executionId": "4feb766c-f056-49e5-a118-aefaeb870611",
+        "chatSessionId": "sess_2fc50ef2-8591-48f3-af5c-d74de5b43026",
+        "timestamp": 1794374731642
+      }
+    ],
+    "6. Implement the sound player": [
+      {
+        "executionId": "4feb766c-f056-49e5-a118-aefaeb870611",
+        "chatSessionId": "sess_2fc50ef2-8591-48f3-af5c-d74de5b43026",
+        "timestamp": 1794374731727
+      }
+    ],
+    "7.1 Implement `src/hooks/useGame.ts`": [
+      {
+        "executionId": "16779478-4bf0-4d8b-8fed-19d0ab5ea100",
+        "chatSessionId": "sess_cbe4680b-b593-475c-8979-bdd6b61ac7db",
+        "timestamp": 1794374854224
+      },
+      {
+        "executionId": "16779478-4bf0-4d8b-8fed-19d0ab5ea100",
+        "chatSessionId": "sess_cbe4680b-b593-475c-8979-bdd6b61ac7db",
+        "timestamp": 1794374912586
+      }
+    ],
+    "7.2 Write unit tests for useGame": [
+      {
+        "executionId": "16779478-4bf0-4d8b-8fed-19d0ab5ea100",
+        "chatSessionId": "sess_cbe4680b-b593-475c-8979-bdd6b61ac7db",
+        "timestamp": 1794374912951
+      },
+      {
+        "executionId": "16779478-4bf0-4d8b-8fed-19d0ab5ea100",
+        "chatSessionId": "sess_cbe4680b-b593-475c-8979-bdd6b61ac7db",
+        "timestamp": 1794374979647
+      }
+    ],
+    "7. Implement the useGame hook": [
+      {
+        "executionId": "16779478-4bf0-4d8b-8fed-19d0ab5ea100",
+        "chatSessionId": "sess_cbe4680b-b593-475c-8979-bdd6b61ac7db",
+        "timestamp": 1794374979761
+      }
+    ],
+    "8.1 Configure the cyberpunk theme": [
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375035887
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375042935
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375084367
+      }
+    ],
+    "8.2 Implement `WelcomeScreen`": [
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375036000
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375087445
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375154386
+      }
+    ],
+    "8.3 Implement `TopBar`, `TargetBox`, and `ArenaScreen`": [
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375036077
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375157744
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375208879
+      }
+    ],
+    "8.4 Implement `Leaderboard` and `GameOverScreen`": [
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375036181
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375087984
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375153628
+      }
+    ],
+    "8.5 Implement `App.tsx` and wire everything": [
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375036256
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375212183
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375281513
+      }
+    ],
+    "8.6 Write component and integration tests": [
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375036326
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375284946
+      },
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375339727
+      }
+    ],
+    "9. Final checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375036401
+      },
+      {
+        "executionId": "35cabf6d-06d9-42db-ae7f-31670d836536",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375554187
+      },
+      {
+        "executionId": "35cabf6d-06d9-42db-ae7f-31670d836536",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375648199
+      }
+    ],
+    "8. Build the UI and wire the app": [
+      {
+        "executionId": "09708e90-f935-4705-87b1-2849ed459cdb",
+        "chatSessionId": "sess_dae359d8-2798-4211-8302-97a79318e8c3",
+        "timestamp": 1794375339806
+      }
+    ]
+  }
+}
